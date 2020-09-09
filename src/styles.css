@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400'); */
+@import url('https://fonts.googleapis.com/css?family=Ranchers');
+
+.moon-header-text {
+   font-family: 'Ranchers', cursive;
+   font-size: 4em;
+   letter-spacing: 0.1em;
+   text-align: center;
+}
+
+.moon-back {
+  background-color: black;
+}
+
+.moon-side {
+  border: black 1 solid;
+  background-color: black;
+  color: white;
+}
+
+.more {
+  padding: 10%;
+  /* margin: 20%; */
+}

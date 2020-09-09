@@ -1,0 +1,36 @@
+<div class="more">
+  <h2>Poll</h2>
+  <form (ngSubmit)="processPoll();">
+    <p>
+      What is your name?
+    </p>
+    <input id="username" [(ngModel)]="uName">
+    <br>
+    <br>
+    <p>
+      What do you think the chances are that the moon landings have been faked?
+    </p>
+    <select id="Q1">
+      <option value="A">0-20%</option>
+      <option value="B">21-40%</option>
+      <option value="C">41-60%</option>
+      <option value="D">61-80%</option>
+      <option value="E">81-100%</option>
+    </select>
+    <br />
+    <br />
+    <button class="btn btn-dark" type="submit">Submit</button>
+    &nbsp;
+    <button class="btn btn-dark" type="reset">Reset</button>
+  </form>
+</div>
+<!--
+  Questions
+
+  Who is actually answering question?
+  What option did they choose?
+  Has this the response been communicated to the user?
+
+  Angular Reactive Form vs Template driven forms
+
+-->

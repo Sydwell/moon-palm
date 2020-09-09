@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ice3-moon';
+  menu2show = 'home';
+
+  menuClick(theButton: string) {
+    this.menu2show = theButton;
+  }
 }
