@@ -17,6 +17,6 @@ export class MoreComponent implements OnInit {
   }
 
   processPoll() {
-    alert(' Actually process the poll! ' + this.uName + this.Q1);
+    alert(' ctually process the poll! ' + this.uName + this.Q1);
   }
 }
