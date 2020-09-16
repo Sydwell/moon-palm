@@ -8,8 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ice3-moon';
   menu2show = 'home';
+  aboutViewed = false;
+  parentInfo = '';
 
   menuClick(theButton: string) {
     this.menu2show = theButton;
+    if (theButton === 'about') {
+      this.aboutViewed = true;
+    }
+  }
+
+  eventMethod(eventString) {
+    this.parentInfo = eventString;
   }
 }

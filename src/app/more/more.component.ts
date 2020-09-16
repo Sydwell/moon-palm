@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-more',
@@ -9,7 +9,15 @@ export class MoreComponent implements OnInit {
   username = 'default';
   serverUsername = 'default';
   uName = 'part';
+  uPassword = '';
   Q1 = '';
+  uFar = '';
+
+  @Input()
+  hasViewedAboutLink: boolean;
+
+  @Output()
+  notify: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -17,6 +25,7 @@ export class MoreComponent implements OnInit {
   }
 
   processPoll() {
-    alert(' ctually process the poll! ' + this.uName + this.Q1);
+    alert(' Actually process the poll! ' + this.uName + this.Q1);
+    this.notify.emit(this.uName);
   }
 }
