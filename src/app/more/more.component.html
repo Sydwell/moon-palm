@@ -1,27 +1,69 @@
 <div class="more">
-  <h2>Poll Direct Master Update</h2>
+  <h2>Poll Wed branch fixes </h2>
   <form (ngSubmit)="processPoll();">
-    <p>
-      What is your name?
-    </p>
-    <input  [(ngModel)]="uName">
-    <br>
-    <br>
-    <p>
-      What do you think the chances are that the moon landings have been faked?
-    </p>
-    <select [(ngModel)]="Q1">
-      <option value="A">0-20%</option>
-      <option value="B">21-40%</option>
-      <option value="C">41-60%</option>
-      <option value="D">61-80%</option>
-      <option value="E">81-100%</option>
-    </select>
-    <br />
-    <br />
-    <button class="btn btn-dark" type="submit">Submit</button>
-    &nbsp;
-    <button class="btn btn-dark" type="reset">Reset</button>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <label> What is your name? </label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" [(ngModel)]="uName" name="uName"  >
+      </div>
+    </div>
+
+    <div class="row  mb-2">
+      <div class="col-md-6">
+        <label>What is your password?</label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" type="password" [(ngModel)]="uPassword" name="uPassword" >
+      </div>
+    </div>
+
+    <div class="row  mb-2">
+      <div class="col-md-6">
+        <label for="uFar">How far is the moon from the earth? (in thousands of KM's)</label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" type="number" min="100" max="999" [(ngModel)]="uFar" name="uFar" >
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        What do you think the chances are that the moon landings have been faked?
+      </div>
+      <div class="col-md-6">
+        <select class="form-control" [(ngModel)]="Q1">
+          <option value="A">0-20%</option>
+          <option value="B">21-40%</option>
+          <option value="C">41-60%</option>
+          <option value="D">61-80%</option>
+          <option value="E">81-100%</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <!-- <div style="display:none"> -->
+      <p>This input will be hidden from  the user</p>
+      <div class="row  mb-2">
+        <div class="col-md-6">
+          <label>Has the viewer seen the <b>About</b> link?</label>
+        </div>
+        <div class="col-md-6">
+          <!-- <input type="checkbox" class="form-control" [(ngModel)]="hasViewedAboutLink" name="viewed" disabled hidden> -->
+          <input type="checkbox" class="form-control" [(ngModel)]="hasViewedAboutLink" name="viewed"  disabled >
+        </div>
+      </div>
+    </div>
+
+
+    <div class='row'>
+      <button class="btn btn-dark" type="submit">Submit</button>
+      &nbsp;
+      <button class="btn btn-dark" type="reset">Reset</button>
+    </div>
+
   </form>
 </div>
 <!--

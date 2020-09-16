@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <div class="moon-back jumbotron text-white mt-4">
-    <p class="moon-header-text"> Welcome to {{ title }}! </p>
+    <p class="moon-header-text"> Welcome to {{ title }} {{ parentInfo }}! </p>
     <!-- <img width="100" alt="Angular Logo" src=""> -->
     <img class="img-responsive" src="assets/images/330px-full-moon2010.jpg">
   </div>
@@ -29,7 +29,8 @@
   <app-about></app-about>
 </div>
 <div *ngIf="menu2show=='more'">
-  <app-more></app-more>
+  <!-- <app-more [hasViewedAboutLink]="aboutViewed"></app-more> -->
+  <app-more (notify)="eventMethod($event)"></app-more>
 </div>
 <div *ngIf="menu2show=='cons'">
   <app-con></app-con>
