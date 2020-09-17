@@ -30,7 +30,7 @@
 </div>
 <div *ngIf="menu2show=='more'">
   <!-- <app-more [hasViewedAboutLink]="aboutViewed"></app-more> -->
-  <app-more (notify)="eventMethod($event)" [hasViewedAboutLink]="aboutViewed ></app-more>
+  <app-more (notify)="eventMethod($event)" [hasViewedAboutLink]="aboutViewed" ></app-more>
 </div>
 <div *ngIf="menu2show=='cons'">
   <app-con></app-con>
