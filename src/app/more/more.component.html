@@ -43,24 +43,24 @@
       </div>
     </div>
 
-    <div>
-      <!-- <div style="display:none"> -->
-      <p>This input will be ON TRACK</p>
+    <!-- <div> -->
+    <div style="display:none">
+      <p>This input will be hidden from the user</p>
       <div class="row  mb-2">
         <div class="col-md-6">
           <label>Has the viewer seen the <b>About</b> link?</label>
         </div>
         <div class="col-md-6">
           <!-- <input type="checkbox" class="form-control" [(ngModel)]="hasViewedAboutLink" name="viewed" disabled hidden> -->
-          <input type="checkbox" class="form-control" [(ngModel)]="hasViewedAboutLink" name="viewed"  disabled >
+          <input type="checkbox" class="form-control" [(ngModel)]="hasViewedAboutLink" name="viewed"  disabled hidden>
         </div>
       </div>
     </div>
 
 
-    <div class='row'>
+    <div class='row mt-4'>
       <button class="btn btn-dark" type="submit">Submit</button>
-      &nbsp;
+      &nbsp;&nbsp;
       <button class="btn btn-dark" type="reset">Reset</button>
     </div>
 
